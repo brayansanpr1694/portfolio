@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Brayan Santamaría · Dev & Security</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a href="#hero" class="nav-logo" aria-label="Home">
+      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="10" y="10" width="20" height="20" rx="3" stroke="#00FF9C" stroke-width="1.5"/>
+        <rect x="14" y="14" width="12" height="12" rx="1.5" stroke="#00FF9C" stroke-width="1"/>
+        <line x1="15" y1="10" x2="15" y2="6"  stroke="#00FF9C" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="20" y1="10" x2="20" y2="6"  stroke="#00FF9C" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="25" y1="10" x2="25" y2="6"  stroke="#00FF9C" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="15" y1="30" x2="15" y2="34" stroke="#00FF9C" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="20" y1="30" x2="20" y2="34" stroke="#00FF9C" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="25" y1="30" x2="25" y2="34" stroke="#00FF9C" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="10" y1="15" x2="6"  y2="15" stroke="#00FF9C" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="10" y1="20" x2="6"  y2="20" stroke="#00FF9C" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="10" y1="25" x2="6"  y2="25" stroke="#00FF9C" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="30" y1="15" x2="34" y2="15" stroke="#00FF9C" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="30" y1="20" x2="34" y2="20" stroke="#00FF9C" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="30" y1="25" x2="34" y2="25" stroke="#00FF9C" stroke-width="1.2" stroke-linecap="round"/>
+        <circle cx="17" cy="18" r="1.5" fill="#00FF9C" opacity="0.8"/>
+        <circle cx="23" cy="22" r="1.5" fill="#22D3EE" opacity="0.8"/>
+        <path d="M17 18 L17 22 L23 22" stroke="#00FF9C" stroke-width="1" opacity="0.6"/>
+      </svg>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#stack">Tech Stack</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="blog.html" class="blog-link">Blog</a></li>
+    </ul>
+
+    <!-- Hamburger -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about"          onclick="closeMenu()">About Me</a>
+    <a href="#projects"       onclick="closeMenu()">Projects</a>
+    <a href="#certifications" onclick="closeMenu()">Certifications</a>
+    <a href="#stack"          onclick="closeMenu()">Tech Stack</a>
+    <a href="#contact"        onclick="closeMenu()">Contact</a>
+    <a href="blog.html" class="mobile-blog-link">Blog</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="glow-blob"></div>
+    <div style="width:100%; display:flex; flex-direction:column;">
+      <div class="hero-content">
+        <div class="hero-text">
+          <p class="hero-greeting">// hello, world</p>
+          <h1 class="hero-name">Brayan<br><span>Santamaría</span></h1>
+          <p class="hero-role">Building secure networks &amp; scalable backend systems</p>
+          <p class="hero-desc">
+            Telecommunications &amp; Software Engineering student from
+            <span class="highlight">Bucaramanga, Colombia</span>.<br>
+            Passionate about infrastructure security, Java backend development,
+            and building real solutions that matter.
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn-primary">view my work</a>
+            <a href="#contact"  class="btn-ghost">contact me</a>
+          </div>
+        </div>
+        <div class="hero-image-wrap">
+          <div class="hero-image-ring">
+             <img src="assets/photo.jpeg" alt="Brayan Santamaría" class="hero-photo"> 
+          </div>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item"><span class="stat-number">2</span><span class="stat-label">Engineering Degrees</span></div>
+        <div class="stat-item"><span class="stat-number">4+</span><span class="stat-label">Certifications</span></div>
+        <div class="stat-item"><span class="stat-number">CCNA</span><span class="stat-label">Networking</span></div>
+        <div class="stat-item"><span class="stat-number">Java</span><span class="stat-label">Backend Focus</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT ME -->
+  <section id="about">
+    <div class="section">
+      <p class="section-label">// 01 · about me</p>
+      <h2 class="section-title">Who I Am</h2>
+      <div class="section-divider"></div>
+      <div class="about-grid">
+        <div class="about-left">
+          <div class="about-terminal">
+            <div class="terminal-bar">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+              <span class="terminal-title">brayan@portfolio ~ whoami</span>
+            </div>
+            <div class="terminal-body">
+              <div class="t-line"><span class="t-prompt">$</span><span class="t-cmd">whoami</span></div>
+              <div class="t-output"><span class="t-key">name</span>: <span class="t-val">Brayan Santamaría</span></div>
+              <div class="t-output"><span class="t-key">age</span>: <span class="t-val">23</span></div>
+              <div class="t-output"><span class="t-key">location</span>: <span class="t-val">Bucaramanga, Colombia</span></div>
+              <div class="t-blank"></div>
+              <div class="t-line"><span class="t-prompt">$</span><span class="t-cmd">cat education.txt</span></div>
+              <div class="t-output"><span class="t-key">degree_1</span>: <span class="t-val">Software Engineering</span></div>
+              <div class="t-output"><span class="t-key">school_1</span>: <span class="t-val">Iberoamericana</span></div>
+              <div class="t-output"><span class="t-key">degree_2</span>: <span class="t-val">Telecommunications Eng.</span></div>
+              <div class="t-output"><span class="t-key">school_2</span>: <span class="t-val">UTS</span></div>
+              <div class="t-output"><span class="t-key">bootcamp</span>: <span class="t-val">DevSenior · Java</span></div>
+              <div class="t-blank"></div>
+              <div class="t-line"><span class="t-prompt">$</span><span class="t-cmd">cat experience.txt</span></div>
+              <div class="t-output"><span class="t-key">company</span>: <span class="t-val">Claro Colombia</span></div>
+              <div class="t-output"><span class="t-key">role</span>: <span class="t-val">Telecommunications</span></div>
+              <div class="t-output"><span class="t-key">status</span>: <span class="t-val" style="color:#00FF9C;">▶ seeking opportunities</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="about-right">
+          <p class="about-text">
+            I'm a <strong>telecommunications and software engineering student</strong> simultaneously
+            pursuing two undergraduate degrees in Bucaramanga, Colombia. I hold tecnólogo titles from
+            UTS and SENA, and I'm currently deepening my Java backend skills through a focused bootcamp
+            at <span class="acc">DevSenior Code</span>.
+          </p>
+          <p class="about-text">
+            My professional background comes from working at <strong>Claro</strong>, where I gained
+            hands-on experience with real production networks — which taught me things no certification
+            exam ever covers. I hold a <span class="acc">CCNA</span> and have earned cybersecurity
+            certificates from both Google and Microsoft.
+          </p>
+          <p class="about-text">
+            I'm drawn to the intersection of <strong>network infrastructure and backend development</strong> —
+            building systems that are not only functional but also secure and observable. Long term,
+            I'm aiming toward a career in NOC analysis, infrastructure support, or junior cybersecurity,
+            with a master's in cybersecurity on the horizon around 2029–2030.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-card">
+              <span class="highlight-icon">🌐</span>
+              <div class="highlight-label">Networking</div>
+              <div class="highlight-value">CCNA · GNS3 · Packet Tracer</div>
+            </div>
+            <div class="highlight-card">
+              <span class="highlight-icon">☕</span>
+              <div class="highlight-label">Backend</div>
+              <div class="highlight-value">Java · Spring Boot</div>
+            </div>
+            <div class="highlight-card">
+              <span class="highlight-icon">🔐</span>
+              <div class="highlight-label">Security</div>
+              <div class="highlight-value">Google &amp; Microsoft Certs</div>
+            </div>
+            <div class="highlight-card">
+              <span class="highlight-icon">🐧</span>
+              <div class="highlight-label">Systems</div>
+              <div class="highlight-value">Linux · Proxmox · Firewall</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section">
+      <p class="section-label">// 02 · projects</p>
+      <h2 class="section-title">What I've Built</h2>
+      <div class="section-divider"></div>
+      <div class="projects-grid">
+
+        <a href="#" class="project-card featured-project">
+          <div><div class="project-card-icon">📡</div></div>
+          <div style="flex:1;display:flex;flex-direction:column;gap:0.8rem;">
+            <div class="project-card-header">
+              <div class="project-card-title">Network Monitoring System — UTS Thesis</div>
+              <span class="project-card-arrow">↗</span>
+            </div>
+            <p class="project-card-desc">Spring Boot backend for anomaly detection and real-time monitoring of the UTS institutional network (~12,000 users). Goal: reduce anomaly detection time from hours to under 30 minutes. REST API + alerting dashboard.</p>
+            <div class="project-tags">
+              <span class="project-tag">Java</span>
+              <span class="project-tag blue">Spring Boot</span>
+              <span class="project-tag cyan">Networking</span>
+              <span class="project-tag">REST API</span>
+            </div>
+            <span class="project-status wip">In progress</span>
+          </div>
+        </a>
+
+        <a href="#" class="project-card">
+          <div class="project-card-icon">🔄</div>
+          <div class="project-card-header">
+            <div class="project-card-title">Multi-vendor Network Interoperability Tool</div>
+            <span class="project-card-arrow">↗</span>
+          </div>
+          <p class="project-card-desc">Spring Boot application enabling configuration and interoperability across multi-vendor network devices — Cisco, Mikrotik, and others — in mixed production environments.</p>
+          <div class="project-tags">
+            <span class="project-tag">Java</span>
+            <span class="project-tag blue">Spring Boot</span>
+            <span class="project-tag cyan">SNMP</span>
+          </div>
+          <span class="project-status wip">In progress</span>
+        </a>
+
+        <a href="#" class="project-card">
+          <div class="project-card-icon">🌿</div>
+          <div class="project-card-header">
+            <div class="project-card-title">RedVivo — Rural WISP Project</div>
+            <span class="project-card-arrow">↗</span>
+          </div>
+          <p class="project-card-desc">Business concept and academic deliverable for a rural internet provider targeting veredas in Barbosa and Santa Helena del Opón, Santander. Includes brand identity, pricing model, and financial projections.</p>
+          <div class="project-tags">
+            <span class="project-tag cyan">ISP Design</span>
+            <span class="project-tag">Business Plan</span>
+            <span class="project-tag">Networking</span>
+          </div>
+          <span class="project-status done">Completed</span>
+        </a>
+
+        <a href="https://github.com/brayansanpr1694" target="_blank" class="project-card">
+          <div class="project-card-icon">☕</div>
+          <div class="project-card-header">
+            <div class="project-card-title">Java Interview Exercises Repository</div>
+            <span class="project-card-arrow">↗</span>
+          </div>
+          <p class="project-card-desc">Progressive Java exercises organized by level: junior, intermedio, senior. Covers OOP, data structures, algorithms, and design patterns — built as a public learning portfolio.</p>
+          <div class="project-tags">
+            <span class="project-tag">Java</span>
+            <span class="project-tag">OOP</span>
+            <span class="project-tag">Algorithms</span>
+          </div>
+          <span class="project-status wip">Growing</span>
+        </a>
+
+        <a href="#" class="project-card">
+          <div class="project-card-icon">▶️</div>
+          <div class="project-card-header">
+            <div class="project-card-title">YouTube Tech Channel — Alejandro</div>
+            <span class="project-card-arrow">↗</span>
+          </div>
+          <p class="project-card-desc">Educational content covering networking, cybersecurity, and software development from a student's perspective. In Spanish, targeting the Colombian tech community.</p>
+          <div class="project-tags">
+            <span class="project-tag cyan">Content</span>
+            <span class="project-tag">Networking</span>
+            <span class="project-tag">Security</span>
+          </div>
+          <span class="project-status wip">Active</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <div class="section">
+      <p class="section-label">// 03 · certifications</p>
+      <h2 class="section-title">Credentials</h2>
+      <div class="section-divider"></div>
+      <div class="certs-grid">
+
+        <a href="#" class="cert-card">
+          <div class="cert-logo">🌐</div>
+          <div class="cert-info">
+            <div class="cert-name">CCNA — Routing &amp; Switching</div>
+            <div class="cert-issuer">Cisco</div>
+            <div class="cert-date">Routing protocols, VLANs, ACLs, IPv4/IPv6</div>
+          </div>
+        </a>
+
+        <a href="#" class="cert-card">
+          <div class="cert-logo">🔐</div>
+          <div class="cert-info">
+            <div class="cert-name">Google Cybersecurity Professional Certificate</div>
+            <div class="cert-issuer">Google · Coursera</div>
+            <div class="cert-date">Security operations, threat analysis, SIEM</div>
+          </div>
+        </a>
+
+        <a href="#" class="cert-card">
+          <div class="cert-logo">🛡️</div>
+          <div class="cert-info">
+            <div class="cert-name">Microsoft Cybersecurity Professional Certificate</div>
+            <div class="cert-issuer">Microsoft · Coursera</div>
+            <div class="cert-date">Azure security, identity management, compliance</div>
+          </div>
+        </a>
+
+        <a href="#" class="cert-card">
+          <div class="cert-logo">📡</div>
+          <div class="cert-info">
+            <div class="cert-name">RITEL — CRC Resolution 4262/2013</div>
+            <div class="cert-issuer">SENA</div>
+            <div class="cert-date">Internal telecommunications network regulation</div>
+          </div>
+        </a>
+
+        <a href="#" class="cert-card">
+          <div class="cert-logo">🎓</div>
+          <div class="cert-info">
+            <div class="cert-name">Tecnólogo en Redes y Telecomunicaciones</div>
+            <div class="cert-issuer">UTS · SENA</div>
+            <div class="cert-date">Network infrastructure, protocols, systems</div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section id="stack">
+    <div class="section">
+      <p class="section-label">// 04 · tech stack</p>
+      <h2 class="section-title">Tools &amp; Technologies</h2>
+      <div class="section-divider"></div>
+      <div class="stack-categories">
+
+        <div>
+          <div class="stack-category-label">Backend &amp; Languages</div>
+          <div class="stack-items">
+            <div class="stack-item"><span class="stack-item-icon">☕</span> Java <span class="stack-level">intermediate</span></div>
+            <div class="stack-item"><span class="stack-item-icon">🌿</span> Spring Boot <span class="stack-level">learning</span></div>
+            <div class="stack-item"><span class="stack-item-icon">🐍</span> Python <span class="stack-level">basic</span></div>
+            <div class="stack-item"><span class="stack-item-icon">🌐</span> HTML / CSS / JS <span class="stack-level">intermediate</span></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="stack-category-label">Networking &amp; Infrastructure</div>
+          <div class="stack-items">
+            <div class="stack-item"><span class="stack-item-icon">📡</span> Cisco IOS <span class="stack-level">advanced</span></div>
+            <div class="stack-item"><span class="stack-item-icon">🔀</span> OSPF / EIGRP / RIP</div>
+            <div class="stack-item"><span class="stack-item-icon">🖧</span> VLANs / ACLs</div>
+            <div class="stack-item"><span class="stack-item-icon">🌍</span> IPv4 / IPv6 Dual Stack</div>
+            <div class="stack-item"><span class="stack-item-icon">🔬</span> GNS3 / Packet Tracer</div>
+            <div class="stack-item"><span class="stack-item-icon">🖥️</span> Proxmox</div>
+          </div>
+        </div>
+
+        <div>
+          <div class="stack-category-label">Security</div>
+          <div class="stack-items">
+            <div class="stack-item"><span class="stack-item-icon">🔐</span> Network Security</div>
+            <div class="stack-item"><span class="stack-item-icon">🛡️</span> Firewall Config</div>
+            <div class="stack-item"><span class="stack-item-icon">📊</span> SIEM Basics</div>
+            <div class="stack-item"><span class="stack-item-icon">🔍</span> Threat Analysis</div>
+          </div>
+        </div>
+
+        <div>
+          <div class="stack-category-label">Tools &amp; Environments</div>
+          <div class="stack-items">
+            <div class="stack-item"><span class="stack-item-icon">🐧</span> Linux</div>
+            <div class="stack-item"><span class="stack-item-icon">🐙</span> Git / GitHub</div>
+            <div class="stack-item"><span class="stack-item-icon">💡</span> IntelliJ IDEA Ultimate</div>
+            <div class="stack-item"><span class="stack-item-icon">📝</span> VS Code</div>
+            <div class="stack-item"><span class="stack-item-icon">🎨</span> Figma</div>
+            <div class="stack-item"><span class="stack-item-icon">🗄️</span> iRedMail</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section">
+      <p class="section-label">// 05 · contact</p>
+      <h2 class="section-title">Let's Talk</h2>
+      <div class="section-divider"></div>
+      <div class="contact-grid">
+
+        <div class="contact-left">
+          <p class="contact-intro">
+            I'm currently open to <strong>internships, junior roles, and remote opportunities</strong>
+            in networking, backend development, or cybersecurity.<br><br>
+            Whether you want to collaborate on a project, discuss tech, or just say hi —
+            my inbox is always open.
+          </p>
+          <div class="contact-links">
+            <a href="https://github.com/brayansanpr1694" target="_blank" class="contact-link">
+              <span class="contact-link-icon">🐙</span>
+              <span class="contact-link-label">github.com/brayansanpr1694</span>
+              <span class="contact-link-arrow">→</span>
+            </a>
+            <a href="https://linkedin.com/in/" target="_blank" class="contact-link">
+              <span class="contact-link-icon">💼</span>
+              <span class="contact-link-label">LinkedIn — Brayan Santamaría</span>
+              <span class="contact-link-arrow">→</span>
+            </a>
+            <a href="mailto:brayan@yourdomain.me" class="contact-link">
+              <span class="contact-link-icon">✉️</span>
+              <span class="contact-link-label">brayan@yourdomain.me</span>
+              <span class="contact-link-arrow">→</span>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <form class="contact-form" onsubmit="handleSubmit(event)">
+            <div class="form-group">
+              <label class="form-label" for="name">Your name</label>
+              <input class="form-input" type="text" id="name" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">Your email</label>
+              <input class="form-input" type="email" id="email" placeholder="john@example.com" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="message">Message</label>
+              <textarea class="form-textarea" id="message" placeholder="Hey Brayan, I'd like to..." required></textarea>
+            </div>
+            <button type="submit" class="btn-primary" style="align-self:flex-start;" id="submit-btn">
+              send message →
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="footer-copy">© 2025 <span>Brayan Santamaría</span> · Built with HTML, CSS &amp; JS · Bucaramanga, Colombia 🇨🇴</p>
+    <a href="#hero" class="footer-back">back to top ↑</a>
+  </footer>
+
+  <script>
+    // Hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+      document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+    });
+
+    function closeMenu() {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    // Navbar shrink on scroll
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+      nav.style.padding = window.scrollY > 60 ? '0.8rem 4rem' : '1.2rem 4rem';
+    });
+
+    // Active nav link highlight
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a:not(.blog-link)');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 120) current = s.getAttribute('id');
+      });
+      navLinks.forEach(a => {
+        a.style.color = a.getAttribute('href') === `#${current}` ? 'var(--accent)' : '';
+      });
+    });
+
+    // Contact form feedback
+    function handleSubmit(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submit-btn');
+      btn.textContent = 'message sent ✓';
+      btn.style.cssText = 'background:rgba(0,255,156,0.15);color:var(--accent);border:1px solid rgba(0,255,156,0.4);';
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.textContent = 'send message →';
+        btn.style.cssText = '';
+        btn.disabled = false;
+        e.target.reset();
+      }, 3000);
+    }
+
+    // Scroll reveal for cards
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.project-card, .cert-card, .highlight-card, .stack-item, .contact-link').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(18px)';
+      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      observer.observe(el);
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog · Brayan Santamaría</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <nav>
+    <a href="index.html" class="nav-logo" aria-label="Home">
+      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="10" y="10" width="20" height="20" rx="3" stroke="#00FF9C" stroke-width="1.5"/>
+        <rect x="14" y="14" width="12" height="12" rx="1.5" stroke="#00FF9C" stroke-width="1"/>
+        <line x1="15" y1="10" x2="15" y2="6" stroke="#00FF9C" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="20" y1="10" x2="20" y2="6" stroke="#00FF9C" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="25" y1="10" x2="25" y2="6" stroke="#00FF9C" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="15" y1="30" x2="15" y2="34" stroke="#00FF9C" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="20" y1="30" x2="20" y2="34" stroke="#00FF9C" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="25" y1="30" x2="25" y2="34" stroke="#00FF9C" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="10" y1="15" x2="6" y2="15" stroke="#00FF9C" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="10" y1="20" x2="6" y2="20" stroke="#00FF9C" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="10" y1="25" x2="6" y2="25" stroke="#00FF9C" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="30" y1="15" x2="34" y2="15" stroke="#00FF9C" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="30" y1="20" x2="34" y2="20" stroke="#00FF9C" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="30" y1="25" x2="34" y2="25" stroke="#00FF9C" stroke-width="1.2" stroke-linecap="round"/>
+        <circle cx="17" cy="18" r="1.5" fill="#00FF9C" opacity="0.8"/>
+        <circle cx="23" cy="22" r="1.5" fill="#22D3EE" opacity="0.8"/>
+        <path d="M17 18 L17 22 L23 22" stroke="#00FF9C" stroke-width="1" opacity="0.6"/>
+      </svg>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About Me</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#certifications">Certifications</a></li>
+      <li><a href="index.html#stack">Tech Stack</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="blog.html" class="blog-link">Blog</a></li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html#about">About Me</a>
+    <a href="index.html#projects">Projects</a>
+    <a href="index.html#certifications">Certifications</a>
+    <a href="index.html#stack">Tech Stack</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="blog.html" class="mobile-blog-link">Blog</a>
+  </div>
+
+  <!-- ── BLOG HERO ── -->
+  <div class="blog-hero">
+    <div class="glow-blob" style="left:60%; top:40%;"></div>
+    <div class="blog-hero-content">
+      <p class="section-label">// thoughts &amp; notes</p>
+      <h1 class="section-title">Blog</h1>
+      <p style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--muted); line-height: 1.8; max-width: 520px; margin-top: 0.8rem;">
+        Writing about networking, backend development, cybersecurity, and lessons learned
+        while studying two engineering degrees simultaneously from Colombia.
+      </p>
+
+      <!-- Filter tags -->
+      <div style="display:flex; gap:0.6rem; flex-wrap:wrap; margin-top:1.8rem;" id="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="networking">Networking</button>
+        <button class="filter-btn" data-filter="java">Java</button>
+        <button class="filter-btn" data-filter="security">Security</button>
+        <button class="filter-btn" data-filter="student">Student life</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── BLOG GRID ── -->
+  <div class="blog-grid" id="blogGrid">
+
+    <!-- FEATURED — primer post cuando lo tengas, de momento es placeholder -->
+    <article class="blog-card featured" data-tags="networking security">
+      <div style="display:flex; flex-direction:column; flex:1;">
+        <div class="blog-card-tag-bar">
+          <span class="blog-tag">Networking</span>
+          <span class="blog-tag cyan">Security</span>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-featured-badge">
+            <span class="featured-dot"></span>
+            Featured post
+          </div>
+          <h2 class="blog-card-title">
+            What working at Claro taught me about real network security vs. what CCNA says
+          </h2>
+          <p class="blog-card-excerpt">
+            There's a gap between certification theory and what actually happens in production networks.
+            After working at Claro and completing my RITEL certification, I started noticing how
+            enforcement gaps, legacy infrastructure, and time pressure shape real-world decisions
+            that no exam prepares you for.
+          </p>
+          <div class="blog-card-footer">
+            <span>Coming soon</span>
+            <span class="read-more">read more →</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Post 2 -->
+    <article class="blog-card" data-tags="java student">
+      <div class="blog-card-tag-bar">
+        <span class="blog-tag">Java</span>
+        <span class="blog-tag" style="background:rgba(156,163,175,0.1); color:var(--muted);">Student life</span>
+      </div>
+      <div class="blog-card-body">
+        <h2 class="blog-card-title">Studying two engineering degrees at once — what actually works</h2>
+        <p class="blog-card-excerpt">
+          UTS at night, Ibero online, a Java bootcamp on the side. This is what I've learned
+          about managing time, energy, and motivation when everything is due at the same time.
+        </p>
+        <div class="blog-card-footer">
+          <span>Coming soon</span>
+          <span class="read-more">read more →</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Post 3 -->
+    <article class="blog-card" data-tags="networking">
+      <div class="blog-card-tag-bar">
+        <span class="blog-tag">Networking</span>
+      </div>
+      <div class="blog-card-body">
+        <h2 class="blog-card-title">OSPF vs EIGRP in practice: a lab comparison using GNS3</h2>
+        <p class="blog-card-excerpt">
+          Both protocols get the job done, but they behave very differently under failure conditions.
+          I ran a series of labs to see how each one converges when links go down unexpectedly.
+        </p>
+        <div class="blog-card-footer">
+          <span>Coming soon</span>
+          <span class="read-more">read more →</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Post 4 -->
+    <article class="blog-card" data-tags="security">
+      <div class="blog-card-tag-bar">
+        <span class="blog-tag cyan">Security</span>
+      </div>
+      <div class="blog-card-body">
+        <h2 class="blog-card-title">Breaking down the Google Cybersecurity Certificate — is it worth it?</h2>
+        <p class="blog-card-excerpt">
+          I completed both the Google and Microsoft Cybersecurity Professional certificates via Coursera.
+          Here's an honest comparison of what each one covers, what it skips, and what actually matters
+          for getting hired.
+        </p>
+        <div class="blog-card-footer">
+          <span>Coming soon</span>
+          <span class="read-more">read more →</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Post 5 -->
+    <article class="blog-card" data-tags="java">
+      <div class="blog-card-tag-bar">
+        <span class="blog-tag">Java</span>
+      </div>
+      <div class="blog-card-body">
+        <h2 class="blog-card-title">OOP concepts that finally clicked for me — explained simply</h2>
+        <p class="blog-card-excerpt">
+          Inheritance, polymorphism, interfaces, abstraction. Everyone explains them the same way
+          and it never made sense until I built something real. Here's how I actually understood them.
+        </p>
+        <div class="blog-card-footer">
+          <span>Coming soon</span>
+          <span class="read-more">read more →</span>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- ── FILTER SCRIPT ── -->
+  <style>
+    .filter-btn {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      padding: 0.4rem 1rem;
+      border-radius: 3px;
+      border: 1px solid rgba(0,255,156,0.15);
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      border-color: rgba(0,255,156,0.4);
+      color: var(--accent);
+      background: var(--accent-dim);
+    }
+  </style>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+      document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+    });
+
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.blog-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+        cards.forEach(card => {
+          if (filter === 'all') {
+            card.style.display = '';
+          } else {
+            const tags = card.dataset.tags || '';
+            card.style.display = tags.includes(filter) ? '' : 'none';
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
