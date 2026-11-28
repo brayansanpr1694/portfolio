@@ -1300,3 +1300,37 @@ footer {
 
   footer { flex-direction: column; gap: 0.8rem; text-align: center; padding: 1.5rem; }
 }
+/* ══════════════════════════════════════════
+   FASE 1 — tarjetas sin enlace, idioma y formulario
+   ══════════════════════════════════════════ */
+.project-card.no-link { cursor: default; }
+.project-card.no-link:hover {
+  border-color: rgba(0,255,156,0.08);
+  transform: none;
+  box-shadow: none;
+}
+.project-card.no-link:hover .project-card-title { color: var(--text); }
+
+.nav-links .lang-switch {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.8rem;
+  color: var(--muted);
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 0.3rem 0.6rem;
+  border-radius: 3px;
+}
+.nav-links .lang-switch::after { display: none; }
+.nav-links .lang-switch:hover { color: var(--accent); border-color: rgba(0,255,156,0.3); }
+.mobile-menu .lang-switch { font-size: 1.1rem; color: var(--muted); }
+.mobile-menu.open a:nth-child(7) { transition-delay: 0.35s; }
+
+.form-honey { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.form-status { min-height: 1.4em; font-family: var(--font-mono); font-size: 0.85rem; margin: 0; }
+.form-status.is-ok { color: var(--accent); }
+.form-status.is-error { color: #ff6b6b; }
+.form-alt { font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted); margin: 0; }
+.form-alt a { color: var(--accent); }
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card, .project-card:hover { transition: none; transform: none; }
+}
