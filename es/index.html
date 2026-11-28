@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Brayan Santamaría · Redes e Infraestructura</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <meta name="description" content="Brayan Santamaría — Estudiante de Ingeniería de Telecomunicaciones e Ingeniería de Software (ambas en curso). Redes, NOC e infraestructura Linux, con seguridad y backend Java como complemento. Disponible para práctica de ingeniería o cargo junior.">
+  <meta name="author" content="Brayan Alejandro Santamaría Prieto">
+  <link rel="canonical" href="https://brayansantamaria.dev/es/">
+  <link rel="alternate" hreflang="en" href="https://brayansantamaria.dev/">
+  <link rel="alternate" hreflang="es" href="https://brayansantamaria.dev/es/">
+  <link rel="alternate" hreflang="x-default" href="https://brayansantamaria.dev/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://brayansantamaria.dev/es/">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:title" content="Brayan Santamaría · Redes e Infraestructura">
+  <meta property="og:description" content="Brayan Santamaría — Estudiante de Ingeniería de Telecomunicaciones e Ingeniería de Software (ambas en curso). Redes, NOC e infraestructura Linux, con seguridad y backend Java como complemento. Disponible para práctica de ingeniería o cargo junior.">
+  <meta property="og:image" content="https://brayansantamaria.dev/assets/photo.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%230b0f14'/%3E%3Crect x='10' y='10' width='20' height='20' rx='3' fill='none' stroke='%2300FF9C' stroke-width='2'/%3E%3Ccircle cx='17' cy='18' r='2' fill='%2300FF9C'/%3E%3Ccircle cx='23' cy='22' r='2' fill='%2322D3EE'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a href="#hero" class="nav-logo" aria-label="Inicio">
+      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="10" y="10" width="20" height="20" rx="3" stroke="#00FF9C" stroke-width="1.5"/>
+        <rect x="14" y="14" width="12" height="12" rx="1.5" stroke="#00FF9C" stroke-width="1"/>
+        <line x1="15" y1="10" x2="15" y2="6"  stroke="#00FF9C" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="20" y1="10" x2="20" y2="6"  stroke="#00FF9C" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="25" y1="10" x2="25" y2="6"  stroke="#00FF9C" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="15" y1="30" x2="15" y2="34" stroke="#00FF9C" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="20" y1="30" x2="20" y2="34" stroke="#00FF9C" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="25" y1="30" x2="25" y2="34" stroke="#00FF9C" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="10" y1="15" x2="6"  y2="15" stroke="#00FF9C" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="10" y1="20" x2="6"  y2="20" stroke="#00FF9C" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="10" y1="25" x2="6"  y2="25" stroke="#00FF9C" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="30" y1="15" x2="34" y2="15" stroke="#00FF9C" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="30" y1="20" x2="34" y2="20" stroke="#00FF9C" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="30" y1="25" x2="34" y2="25" stroke="#00FF9C" stroke-width="1.2" stroke-linecap="round"/>
+        <circle cx="17" cy="18" r="1.5" fill="#00FF9C" opacity="0.8"/>
+        <circle cx="23" cy="22" r="1.5" fill="#22D3EE" opacity="0.8"/>
+        <path d="M17 18 L17 22 L23 22" stroke="#00FF9C" stroke-width="1" opacity="0.6"/>
+      </svg>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">Sobre mí</a></li>
+      <li><a href="#projects">Proyectos</a></li>
+      <li><a href="#certifications">Certificaciones</a></li>
+      <li><a href="#stack">Tecnologías</a></li>
+      <li><a href="#contact">Contacto</a></li>
+      <li><a href="../blog.html" class="blog-link">Blog</a></li>
+      <li class="nav-lang"><span class="lang-pill" role="group" aria-label="Idioma / Language"><span class="lang-current" aria-current="true">ES</span><a href="../" hreflang="en" lang="en">EN</a></span></li>
+    </ul>
+
+    <div class="lang-mobile"><span class="lang-pill" role="group" aria-label="Idioma / Language"><span class="lang-current" aria-current="true">ES</span><a href="../" hreflang="en" lang="en">EN</a></span></div>
+
+    <!-- Hamburger -->
+    <button class="hamburger" id="hamburger" aria-label="Abrir o cerrar menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about"          onclick="closeMenu()">Sobre mí</a>
+    <a href="#projects"       onclick="closeMenu()">Proyectos</a>
+    <a href="#certifications" onclick="closeMenu()">Certificaciones</a>
+    <a href="#stack"          onclick="closeMenu()">Tecnologías</a>
+    <a href="#contact"        onclick="closeMenu()">Contacto</a>
+    <a href="../blog.html" class="mobile-blog-link">Blog</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="glow-blob"></div>
+    <div style="width:100%; display:flex; flex-direction:column;">
+      <div class="hero-content">
+        <div class="hero-text">
+          <p class="hero-greeting">// hola, mundo</p>
+          <h1 class="hero-name">Brayan<br><span>Santamaría</span></h1>
+          <p class="hero-role">Redes · NOC · Infraestructura</p>
+          <p class="hero-desc">
+            Estudiante de Ingeniería de Telecomunicaciones e Ingeniería de Software (ambas en curso) en
+            <span class="highlight">Bucaramanga, Colombia</span>.<br>
+            Enfocado en redes, NOC e infraestructura Linux: enrutamiento y conmutación Cisco, VoIP y un homelab con Proxmox.
+            Seguridad y backend Java como capacidades complementarias.<br>
+            Disponible para <span class="highlight">práctica de ingeniería o cargo junior en NOC y redes</span>.
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn-primary">ver proyectos</a>
+            <a href="../assets/cv-brayan-santamaria.pdf" class="btn-ghost" target="_blank" rel="noopener">descargar CV</a>
+            <a href="#contact"  class="btn-ghost">contactarme</a>
+          </div>
+        </div>
+        <div class="hero-image-wrap">
+          <div class="hero-image-ring">
+             <img src="../assets/photo.jpeg" alt="Brayan Santamaría" class="hero-photo"> 
+
+          </div>
+        </div>
+      </div>
+      <div class="hero-stats" translate="no">
+        <div class="stat-item"><span class="stat-number">2</span><span class="stat-label">Ingenierías en curso</span></div>
+        <div class="stat-item"><span class="stat-number">10+</span><span class="stat-label">Certificaciones</span></div>
+        <div class="stat-item"><span class="stat-number">Cisco</span><span class="stat-label">Redes</span></div>
+        <div class="stat-item"><span class="stat-number">NOC</span><span class="stat-label">Cargo objetivo</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT ME -->
+  <section id="about">
+    <div class="section">
+      <p class="section-label">// 01 · sobre mí</p>
+      <h2 class="section-title">Quién soy</h2>
+      <div class="section-divider"></div>
+      <div class="about-grid">
+        <div class="about-left">
+          <div class="about-terminal">
+            <div class="terminal-bar">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+              <span class="terminal-title">brayan@portfolio ~ whoami</span>
+            </div>
+            <div class="terminal-body">
+              <div class="t-line"><span class="t-prompt">$</span><span class="t-cmd">whoami</span></div>
+              <div class="t-output"><span class="t-key">name</span>: <span class="t-val">Brayan Santamaría</span></div>
+              <div class="t-output"><span class="t-key">location</span>: <span class="t-val">Bucaramanga, Colombia</span></div>
+              <div class="t-blank"></div>
+              <div class="t-line"><span class="t-prompt">$</span><span class="t-cmd">cat education.txt</span></div>
+              <div class="t-output"><span class="t-key">degree_1</span>: <span class="t-val">Ingeniería de Software (en curso)</span></div>
+              <div class="t-output"><span class="t-key">school_1</span>: <span class="t-val">Iberoamericana</span></div>
+              <div class="t-output"><span class="t-key">degree_2</span>: <span class="t-val">Ing. de Telecomunicaciones (en curso)</span></div>
+              <div class="t-output"><span class="t-key">school_2</span>: <span class="t-val">UTS</span></div>
+              <div class="t-output"><span class="t-key">bootcamp</span>: <span class="t-val">DevSenior · Java</span></div>
+              <div class="t-blank"></div>
+              <div class="t-line"><span class="t-prompt">$</span><span class="t-cmd">cat experience.txt</span></div>
+              <div class="t-output"><span class="t-key">company</span>: <span class="t-val">Claro Colombia (aprendiz SENA)</span></div>
+              <div class="t-output"><span class="t-key">role</span>: <span class="t-val">Aprendiz de Operación y Mantenimiento · Red Fija (jul–dic 2025)</span></div>
+              <div class="t-output"><span class="t-key">teaching</span>: <span class="t-val">Docente de robótica y programación (2025)</span></div>
+              <div class="t-output"><span class="t-key">status</span>: <span class="t-val" style="color:#00FF9C;">▶ disponible para práctica · junior NOC / redes</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="about-right">
+          <p class="about-text">
+            Soy <strong>estudiante de Ingeniería de Telecomunicaciones e Ingeniería de Software</strong> en Bucaramanga, Colombia;
+            curso las dos carreras al mismo tiempo y ninguna ha terminado todavía. Soy tecnólogo de la UTS y del SENA, y tengo
+            certificaciones en backend Java y Spring Boot con <span class="acc">DevSenior Code</span>.
+          </p>
+          <p class="about-text">
+            Mi experiencia práctica viene de mi etapa como aprendiz SENA en <strong>Claro</strong>, en Operación y Mantenimiento de la red fija (julio a diciembre de 2025),
+            donde vi cómo se opera día a día una red en producción. Completé las rutas de Cisco <span class="acc">Network Technician</span> y <span class="acc">Junior Cybersecurity Analyst</span>,
+            y tengo los certificados de ciberseguridad de Google y de Microsoft.
+          </p>
+          <p class="about-text">
+            Mi foco principal es la <strong>infraestructura y la operación de redes</strong>; la seguridad y el backend Java
+            lo complementan, para construir y operar sistemas seguros y observables. Busco una <strong>práctica de ingeniería o un cargo junior en NOC, redes o infraestructura</strong>, con disponibilidad de tiempo completo.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-card">
+              <span class="highlight-icon">🌐</span>
+              <div class="highlight-label">Redes</div>
+              <div class="highlight-value">Cisco NetAcad · GNS3 · Packet Tracer</div>
+            </div>
+            <div class="highlight-card">
+              <span class="highlight-icon">☕</span>
+              <div class="highlight-label">Backend</div>
+              <div class="highlight-value">Java · Spring Boot</div>
+            </div>
+            <div class="highlight-card">
+              <span class="highlight-icon">🔐</span>
+              <div class="highlight-label">Seguridad</div>
+              <div class="highlight-value">Cisco · Google · Microsoft</div>
+            </div>
+            <div class="highlight-card">
+              <span class="highlight-icon">🐧</span>
+              <div class="highlight-label">Sistemas</div>
+              <div class="highlight-value">Linux · Proxmox · Firewall</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section">
+      <p class="section-label">// 02 · proyectos</p>
+      <h2 class="section-title">Lo que he construido</h2>
+      <div class="section-divider"></div>
+      <div class="projects-grid">
+
+        <div class="project-card no-link featured-project">
+          <div><div class="project-card-icon">📡</div></div>
+          <div style="flex:1;display:flex;flex-direction:column;gap:0.8rem;">
+            <div class="project-card-header">
+              <div class="project-card-title">Sistema de monitoreo de red — Proyecto de investigación</div>
+            </div>
+            <p class="project-card-desc">Proyecto en fase de investigación: backend en Spring Boot para detectar anomalías y monitorear en tiempo real la red de un campus institucional. Objetivo: reducir el tiempo de detección de anomalías de horas a menos de 30 minutos, con una API REST y un panel de alertas.</p>
+            <div class="project-tags">
+              <span class="project-tag">Java</span>
+              <span class="project-tag blue">Spring Boot</span>
+              <span class="project-tag cyan">Redes</span>
+              <span class="project-tag">REST API</span>
+            </div>
+            <span class="project-status wip">En desarrollo · evidencia próximamente</span>
+          </div>
+        </div>
+
+        <div class="project-card no-link">
+          <div class="project-card-icon">🏎️</div>
+          <div class="project-card-header">
+            <div class="project-card-title">SIIMA Vektor — Sistema de telemetría para vehículo eléctrico</div>
+          </div>
+          <p class="project-card-desc">Integrante del equipo de telemetría del vehículo eléctrico monoplaza SIIMA Vektor (UTS). Diseño basado en ESP32 (se evaluó el ESP32-C5 por su CAN FD; en el montaje final, ESP32-WROOM): lectura del BMS de la batería de 48 V, sensor Hall para RPM, RTC DS3231, registro en doble microSD y transmisión en vivo por LTE con el módulo SIMCOM A7670SA. Presentado como ponencia en el X CISIET 2026 (Universidad de Antofagasta, Chile).</p>
+          <div class="project-tags">
+            <span class="project-tag">Embebidos</span>
+            <span class="project-tag blue">CAN FD</span>
+            <span class="project-tag cyan">IoT / LTE</span>
+          </div>
+          <span class="project-status wip">En desarrollo · evidencia próximamente</span>
+        </div>
+
+        <div class="project-card no-link">
+          <div class="project-card-icon">🖥️</div>
+          <div class="project-card-header">
+            <div class="project-card-title">Homelab con Proxmox</div>
+          </div>
+          <p class="project-card-desc">Laboratorio autoalojado sobre hardware reutilizado: Proxmox VE, firewall pfSense con puentes WAN y LAN separados, VMs Ubuntu Server, Nextcloud (Apache + MariaDB), Nginx + vsftpd, iRedMail y endurecimiento con SSH/UFW.</p>
+          <div class="project-tags">
+            <span class="project-tag">Proxmox</span>
+            <span class="project-tag blue">pfSense</span>
+            <span class="project-tag cyan">Linux</span>
+          </div>
+          <span class="project-status wip">En desarrollo · evidencia próximamente</span>
+        </div>
+
+        <div class="project-card no-link">
+          <div class="project-card-icon">🔄</div>
+          <div class="project-card-header">
+            <div class="project-card-title">Herramienta de interoperabilidad de red multifabricante</div>
+          </div>
+          <p class="project-card-desc">Aplicación en Spring Boot para configurar e interoperar equipos de red de varios fabricantes —Cisco, MikroTik y otros— en entornos mixtos.</p>
+          <div class="project-tags">
+            <span class="project-tag">Java</span>
+            <span class="project-tag blue">Spring Boot</span>
+            <span class="project-tag cyan">SNMP</span>
+          </div>
+          <span class="project-status wip">En desarrollo · evidencia próximamente</span>
+        </div>
+
+        <div class="project-card no-link">
+          <div class="project-card-icon">🌿</div>
+          <div class="project-card-header">
+            <div class="project-card-title">RedVivo — Proyecto WISP rural</div>
+          </div>
+          <p class="project-card-desc">Concepto de negocio y entregable académico para un proveedor de internet rural dirigido a veredas de Barbosa y Santa Helena del Opón, Santander. Incluye identidad de marca, modelo de precios y proyecciones financieras.</p>
+          <div class="project-tags">
+            <span class="project-tag cyan">Diseño de ISP</span>
+            <span class="project-tag">Plan de negocio</span>
+            <span class="project-tag">Redes</span>
+          </div>
+          <span class="project-status wip">Entregable académico · ficha en desarrollo</span>
+        </div>
+
+        <a href="https://github.com/brayansanpr1694/java" target="_blank" rel="noopener" class="project-card">
+          <div class="project-card-icon">☕</div>
+          <div class="project-card-header">
+            <div class="project-card-title">Repositorio de ejercicios Java para entrevistas</div>
+            <span class="project-card-arrow">↗</span>
+          </div>
+          <p class="project-card-desc">Ejercicios de Java progresivos organizados por nivel: junior, intermedio y senior. Cubre POO, estructuras de datos, algoritmos y patrones de diseño, como portafolio público de aprendizaje.</p>
+          <div class="project-tags">
+            <span class="project-tag">Java</span>
+            <span class="project-tag">POO</span>
+            <span class="project-tag">Algoritmos</span>
+          </div>
+          <span class="project-status wip">En crecimiento</span>
+        </a>
+
+        <a href="https://www.youtube.com/@Alejandroingenieria" target="_blank" rel="noopener" class="project-card">
+          <div class="project-card-icon">▶️</div>
+          <div class="project-card-header">
+            <div class="project-card-title">Canal de YouTube — Alejandro Ingeniería</div>
+            <span class="project-card-arrow">↗</span>
+          </div>
+          <p class="project-card-desc">Contenido educativo sobre redes, ciberseguridad y desarrollo de software desde la mirada de un estudiante. En español, para la comunidad tecnológica colombiana.</p>
+          <div class="project-tags">
+            <span class="project-tag cyan">Contenido</span>
+            <span class="project-tag">Redes</span>
+            <span class="project-tag">Seguridad</span>
+          </div>
+          <span class="project-status wip">Activo</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <div class="section">
+      <p class="section-label">// 03 · certificaciones</p>
+      <h2 class="section-title">Credenciales</h2>
+      <div class="section-divider"></div>
+      <div class="certs-grid">
+
+        <a href="https://www.linkedin.com/in/brayan-santamaria-developer/details/certifications/" target="_blank" rel="noopener" class="cert-card">
+          <div class="cert-logo">🛡️</div>
+          <div class="cert-info">
+            <div class="cert-name">Cisco Junior Cybersecurity Analyst Career Path</div>
+            <div class="cert-issuer">Cisco Networking Academy · MinTIC · 2026</div>
+            <div class="cert-date">Introducción a la ciberseguridad, fundamentos y dispositivos de red, seguridad de terminales, defensa de la red y administración de amenazas · preparación CCST Cybersecurity</div>
+          </div>
+        </a>
+
+        <a href="https://www.linkedin.com/in/brayan-santamaria-developer/details/certifications/" target="_blank" rel="noopener" class="cert-card">
+          <div class="cert-logo">🌐</div>
+          <div class="cert-info">
+            <div class="cert-name">Cisco Network Technician Career Path</div>
+            <div class="cert-issuer">Cisco Networking Academy · MinTIC · 2026</div>
+            <div class="cert-date">Fundamentos de redes, dispositivos y configuración inicial, direccionamiento y resolución de problemas, soporte y seguridad de red · preparación CCST Networking</div>
+          </div>
+        </a>
+
+        <a href="https://coursera.org/verify/professional-cert/B2R8ENUWCVS5" target="_blank" rel="noopener" class="cert-card">
+          <div class="cert-logo">🔐</div>
+          <div class="cert-info">
+            <div class="cert-name">Google Cybersecurity Professional Certificate</div>
+            <div class="cert-issuer">Google · Coursera · 2025</div>
+            <div class="cert-date">Operaciones de seguridad, análisis de amenazas, SIEM</div>
+          </div>
+        </a>
+
+        <a href="https://coursera.org/verify/professional-cert/ZIGMMZ8AMHQ5" target="_blank" rel="noopener" class="cert-card">
+          <div class="cert-logo">🛡️</div>
+          <div class="cert-info">
+            <div class="cert-name">Microsoft Cybersecurity Analyst Professional Certificate</div>
+            <div class="cert-issuer">Microsoft · Coursera · 2025</div>
+            <div class="cert-date">Seguridad en Azure, gestión de identidades, cumplimiento</div>
+          </div>
+        </a>
+
+        <a href="https://www.linkedin.com/in/brayan-santamaria-developer/details/certifications/" target="_blank" rel="noopener" class="cert-card">
+          <div class="cert-logo">☕</div>
+          <div class="cert-info">
+            <div class="cert-name">Java Backend Developer Professional Certificate</div>
+            <div class="cert-issuer">DevSenior · Certiprof · 2026</div>
+            <div class="cert-date">Certificación por examen · vigente hasta 2031</div>
+          </div>
+        </a>
+
+        <a href="https://www.linkedin.com/in/brayan-santamaria-developer/details/certifications/" target="_blank" rel="noopener" class="cert-card">
+          <div class="cert-logo">🌿</div>
+          <div class="cert-info">
+            <div class="cert-name">Spring Boot Backend Enterprise</div>
+            <div class="cert-issuer">DevSenior · 2025</div>
+            <div class="cert-date">APIs REST y backend empresarial con Spring Boot</div>
+          </div>
+        </a>
+
+        <a href="https://www.linkedin.com/in/brayan-santamaria-developer/details/certifications/" target="_blank" rel="noopener" class="cert-card">
+          <div class="cert-logo">📡</div>
+          <div class="cert-info">
+            <div class="cert-name">RITEL — Resolución CRC 4262 de 2013</div>
+            <div class="cert-issuer">SENA · 2026</div>
+            <div class="cert-date">Reglamento de redes internas de telecomunicaciones</div>
+          </div>
+        </a>
+
+        <a class="cert-card">
+          <div class="cert-logo">🎓</div>
+          <div class="cert-info">
+            <div class="cert-name">Tecnólogo en Gestión de Sistemas de Telecomunicaciones</div>
+            <div class="cert-issuer">UTS · 2025</div>
+            <div class="cert-date">Infraestructura de red, protocolos y sistemas</div>
+          </div>
+        </a>
+
+        <a class="cert-card">
+          <div class="cert-logo">💻</div>
+          <div class="cert-info">
+            <div class="cert-name">Tecnólogo en Análisis y Desarrollo de Software (ADSO)</div>
+            <div class="cert-issuer">SENA · 2026</div>
+            <div class="cert-date">Análisis, diseño y desarrollo de software</div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section id="stack">
+    <div class="section">
+      <p class="section-label">// 04 · tecnologías</p>
+      <h2 class="section-title">Herramientas y tecnologías</h2>
+      <div class="section-divider"></div>
+      <div class="stack-categories">
+
+        <div>
+          <div class="stack-category-label">Backend y lenguajes</div>
+          <div class="stack-items">
+            <div class="stack-item"><span class="stack-item-icon">☕</span> Java <span class="stack-level">intermedio</span></div>
+            <div class="stack-item"><span class="stack-item-icon">🌿</span> Spring Boot <span class="stack-level">aprendiendo</span></div>
+            <div class="stack-item"><span class="stack-item-icon">🐍</span> Python <span class="stack-level">básico</span></div>
+            <div class="stack-item"><span class="stack-item-icon">🌐</span> HTML / CSS / JS <span class="stack-level">intermedio</span></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="stack-category-label">Redes e infraestructura</div>
+          <div class="stack-items">
+            <div class="stack-item"><span class="stack-item-icon">📡</span> Cisco IOS <span class="stack-level">avanzado</span></div>
+            <div class="stack-item"><span class="stack-item-icon">🔀</span> OSPF / EIGRP / RIP</div>
+            <div class="stack-item"><span class="stack-item-icon">🖧</span> VLANs / ACLs</div>
+            <div class="stack-item"><span class="stack-item-icon">🌍</span> IPv4 / IPv6 Dual Stack</div>
+            <div class="stack-item"><span class="stack-item-icon">🔬</span> GNS3 / Packet Tracer</div>
+            <div class="stack-item"><span class="stack-item-icon">🖥️</span> Proxmox</div>
+          </div>
+        </div>
+
+        <div>
+          <div class="stack-category-label">Seguridad</div>
+          <div class="stack-items">
+            <div class="stack-item"><span class="stack-item-icon">🔐</span> Seguridad de redes</div>
+            <div class="stack-item"><span class="stack-item-icon">🛡️</span> Configuración de firewall</div>
+            <div class="stack-item"><span class="stack-item-icon">📊</span> Fundamentos de SIEM</div>
+            <div class="stack-item"><span class="stack-item-icon">🔍</span> Análisis de amenazas</div>
+          </div>
+        </div>
+
+        <div>
+          <div class="stack-category-label">Herramientas y entornos</div>
+          <div class="stack-items">
+            <div class="stack-item"><span class="stack-item-icon">🐧</span> Linux</div>
+            <div class="stack-item"><span class="stack-item-icon">🐙</span> Git / GitHub</div>
+            <div class="stack-item"><span class="stack-item-icon">💡</span> IntelliJ IDEA Ultimate</div>
+            <div class="stack-item"><span class="stack-item-icon">📝</span> VS Code</div>
+            <div class="stack-item"><span class="stack-item-icon">🎨</span> Figma</div>
+            <div class="stack-item"><span class="stack-item-icon">🗄️</span> iRedMail</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section">
+      <p class="section-label">// 05 · contacto</p>
+      <h2 class="section-title">Hablemos</h2>
+      <div class="section-divider"></div>
+      <div class="contact-grid">
+
+        <div class="contact-left">
+          <p class="contact-intro">
+            Estoy disponible para <strong>práctica de ingeniería o cargo junior en redes, NOC o infraestructura</strong>,
+            presencial en Bucaramanga o remoto. La seguridad y el backend Java son capacidades complementarias.<br><br>
+            La forma más rápida de contactarme es por correo o LinkedIn.
+          </p>
+          <div class="contact-links">
+            <a href="../assets/cv-brayan-santamaria.pdf" target="_blank" rel="noopener" class="contact-link">
+              <span class="contact-link-icon">📄</span>
+              <span class="contact-link-label">Descargar mi CV (PDF)</span>
+              <span class="contact-link-arrow">→</span>
+            </a>
+            <a href="https://www.linkedin.com/in/brayan-santamaria-developer" target="_blank" rel="noopener" class="contact-link">
+              <span class="contact-link-icon">💼</span>
+              <span class="contact-link-label">LinkedIn — Brayan Santamaría</span>
+              <span class="contact-link-arrow">→</span>
+            </a>
+            <a href="mailto:brayan.santamaria.2002@gmail.com" class="contact-link">
+              <span class="contact-link-icon">✉️</span>
+              <span class="contact-link-label">brayan.santamaria.2002@gmail.com</span>
+              <span class="contact-link-arrow">→</span>
+            </a>
+            <a href="https://github.com/brayansanpr1694" target="_blank" rel="noopener" class="contact-link">
+              <span class="contact-link-icon">🐙</span>
+              <span class="contact-link-label">github.com/brayansanpr1694</span>
+              <span class="contact-link-arrow">→</span>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <form class="contact-form" id="contact-form" onsubmit="handleSubmit(event)" novalidate>
+            <div class="form-group">
+              <label class="form-label" for="name">Tu nombre</label>
+              <input class="form-input" type="text" id="name" name="name" autocomplete="name" placeholder="Nombre y apellido" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">Tu correo</label>
+              <input class="form-input" type="email" id="email" name="email" autocomplete="email" placeholder="tu@empresa.com" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="message">Mensaje</label>
+              <textarea class="form-textarea" id="message" name="message" placeholder="Hola, Brayan. Te escribo para..." required></textarea>
+            </div>
+            <input type="text" name="_honey" class="form-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <button type="submit" class="btn-primary" style="align-self:flex-start;" id="submit-btn">
+              enviar mensaje →
+            </button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            <p class="form-alt">¿Prefieres el correo? Escríbeme a <a href="mailto:brayan.santamaria.2002@gmail.com">brayan.santamaria.2002@gmail.com</a></p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="footer-copy">© <span id="year">2026</span> <span>Brayan Santamaría</span> · Hecho con HTML, CSS y JS · Bucaramanga, Colombia 🇨🇴</p>
+    <a href="#hero" class="footer-back">volver arriba ↑</a>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+      document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+    });
+
+    function closeMenu() {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    // Navbar shrink on scroll
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+      nav.style.padding = window.scrollY > 60 ? '0.8rem 4rem' : '1.2rem 4rem';
+    });
+
+    // Active nav link highlight
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a:not(.blog-link)');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 120) current = s.getAttribute('id');
+      });
+      navLinks.forEach(a => {
+        a.style.color = a.getAttribute('href') === `#${current}` ? 'var(--accent)' : '';
+      });
+    });
+
+    // Formulario de contacto (FormSubmit, AJAX). Mismo endpoint que ya está activo.
+    const FORM_ENDPOINT = 'https://formsubmit.co/ajax/brayan.santamaria@outlook.com';
+    const FORM_TEXT = {
+      sending: 'enviando...',
+      button: 'enviar mensaje →',
+      invalid: 'Completa tu nombre, un correo válido y el mensaje.',
+      ok: '¡Gracias! Tu mensaje fue enviado. Te responderé por correo.',
+      error: 'No se pudo enviar el mensaje. Escríbeme a brayan.santamaria.2002@gmail.com.'
+    };
+    async function handleSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      const f = form.elements;
+      const btn = document.getElementById('submit-btn');
+      const status = document.getElementById('form-status');
+      status.className = 'form-status';
+      if (!form.checkValidity()) {
+        status.textContent = FORM_TEXT.invalid;
+        status.classList.add('is-error');
+        return;
+      }
+      if (f._honey.value) return; // bot
+      btn.disabled = true;
+      btn.textContent = FORM_TEXT.sending;
+      status.textContent = '';
+      try {
+        const res = await fetch(FORM_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            name: f.name.value.trim(),
+            email: f.email.value.trim(),
+            message: f.message.value.trim(),
+            _replyto: f.email.value.trim(),
+            _subject: 'Nuevo mensaje desde brayansantamaria.dev',
+            _template: 'table',
+            _captcha: 'false'
+          })
+        });
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok || String(data.success) !== 'true') throw new Error('send failed');
+        status.textContent = FORM_TEXT.ok;
+        status.classList.add('is-ok');
+        form.reset();
+      } catch (err) {
+        status.textContent = FORM_TEXT.error;
+        status.classList.add('is-error');
+      } finally {
+        btn.disabled = false;
+        btn.textContent = FORM_TEXT.button;
+      }
+    }
+
+    // Scroll reveal for cards
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.project-card, .cert-card, .highlight-card, .stack-item, .contact-link').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(18px)';
+      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      observer.observe(el);
+    });
+  </script>
+
+</body>
+</html>
