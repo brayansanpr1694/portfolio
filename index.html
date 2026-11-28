@@ -20,7 +20,7 @@
   <meta property="og:image" content="https://brayansantamaria.dev/assets/photo.jpeg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%230b0f14'/%3E%3Crect x='10' y='10' width='20' height='20' rx='3' fill='none' stroke='%2300FF9C' stroke-width='2'/%3E%3Ccircle cx='17' cy='18' r='2' fill='%2300FF9C'/%3E%3Ccircle cx='23' cy='22' r='2' fill='%2322D3EE'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=2">
 </head>
 <body>
 
@@ -198,11 +198,12 @@
       <div class="section-divider"></div>
       <div class="projects-grid">
 
-        <div class="project-card no-link featured-project">
+        <a href="https://github.com/brayansanpr1694/monitoreo-red-campus" target="_blank" rel="noopener" class="project-card featured-project">
           <div><div class="project-card-icon">📡</div></div>
           <div style="flex:1;display:flex;flex-direction:column;gap:0.8rem;">
             <div class="project-card-header">
               <div class="project-card-title">Network Monitoring System — Research Project</div>
+              <span class="project-card-arrow">↗</span>
             </div>
             <p class="project-card-desc">Research-stage project for a Spring Boot backend focused on anomaly detection and real-time monitoring of an institutional campus network. Goal: reduce anomaly detection time from hours to under 30 minutes, with a REST API and an alerting dashboard.</p>
             <div class="project-tags">
@@ -211,14 +212,15 @@
               <span class="project-tag cyan">Networking</span>
               <span class="project-tag">REST API</span>
             </div>
-            <span class="project-status wip">In development · evidence coming soon</span>
+            <span class="project-status wip">Research phase · design on GitHub</span>
           </div>
-        </div>
+        </a>
 
-        <div class="project-card no-link">
+        <a href="https://github.com/brayansanpr1694/siima-vektor-telemetria" target="_blank" rel="noopener" class="project-card">
           <div class="project-card-icon">🏎️</div>
           <div class="project-card-header">
             <div class="project-card-title">SIIMA Vektor — EV Telemetry System</div>
+            <span class="project-card-arrow">↗</span>
           </div>
           <p class="project-card-desc">Member of the telemetry team for the SIIMA Vektor single-seat electric vehicle (UTS). ESP32-based design (ESP32-C5 evaluated for CAN FD; ESP32-WROOM in the final build): 48 V battery BMS reading, Hall-effect RPM sensor, DS3231 RTC, dual microSD logging and live LTE link via SIMCOM A7670SA. Presented as a talk at X CISIET 2026 (Universidad de Antofagasta, Chile).</p>
           <div class="project-tags">
@@ -226,13 +228,14 @@
             <span class="project-tag blue">CAN FD</span>
             <span class="project-tag cyan">IoT / LTE</span>
           </div>
-          <span class="project-status wip">In development · evidence coming soon</span>
-        </div>
+          <span class="project-status wip">Case study on GitHub</span>
+        </a>
 
-        <div class="project-card no-link">
+        <a href="https://github.com/brayansanpr1694/homelab-proxmox" target="_blank" rel="noopener" class="project-card">
           <div class="project-card-icon">🖥️</div>
           <div class="project-card-header">
             <div class="project-card-title">Proxmox Homelab</div>
+            <span class="project-card-arrow">↗</span>
           </div>
           <p class="project-card-desc">Self-hosted lab on repurposed hardware: Proxmox VE, pfSense firewall with segmented WAN/LAN bridges, Ubuntu Server VMs, Nextcloud (Apache + MariaDB), Nginx + vsftpd, iRedMail and SSH/UFW hardening.</p>
           <div class="project-tags">
@@ -240,8 +243,8 @@
             <span class="project-tag blue">pfSense</span>
             <span class="project-tag cyan">Linux</span>
           </div>
-          <span class="project-status wip">In development · evidence coming soon</span>
-        </div>
+          <span class="project-status wip">Active · documented on GitHub</span>
+        </a>
 
         <div class="project-card no-link">
           <div class="project-card-icon">🔄</div>
@@ -564,7 +567,7 @@
     });
 
     // Contact form (FormSubmit, AJAX). Same endpoint that is already active.
-    const FORM_ENDPOINT = 'https://formsubmit.co/ajax/brayan.santamaria@outlook.com';
+    const FORM_ENDPOINT = 'https://formsubmit.co/ajax/brayan.santamaria.2002@gmail.com';
     const FORM_TEXT = {
       sending: 'sending...',
       button: 'send message →',

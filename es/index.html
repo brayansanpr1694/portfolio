@@ -21,7 +21,7 @@
   <meta property="og:image" content="https://brayansantamaria.dev/assets/photo.jpeg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%230b0f14'/%3E%3Crect x='10' y='10' width='20' height='20' rx='3' fill='none' stroke='%2300FF9C' stroke-width='2'/%3E%3Ccircle cx='17' cy='18' r='2' fill='%2300FF9C'/%3E%3Ccircle cx='23' cy='22' r='2' fill='%2322D3EE'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../styles.css?v=2">
 </head>
 <body>
 
@@ -199,11 +199,12 @@
       <div class="section-divider"></div>
       <div class="projects-grid">
 
-        <div class="project-card no-link featured-project">
+        <a href="https://github.com/brayansanpr1694/monitoreo-red-campus" target="_blank" rel="noopener" class="project-card featured-project">
           <div><div class="project-card-icon">📡</div></div>
           <div style="flex:1;display:flex;flex-direction:column;gap:0.8rem;">
             <div class="project-card-header">
               <div class="project-card-title">Sistema de monitoreo de red — Proyecto de investigación</div>
+              <span class="project-card-arrow">↗</span>
             </div>
             <p class="project-card-desc">Proyecto en fase de investigación: backend en Spring Boot para detectar anomalías y monitorear en tiempo real la red de un campus institucional. Objetivo: reducir el tiempo de detección de anomalías de horas a menos de 30 minutos, con una API REST y un panel de alertas.</p>
             <div class="project-tags">
@@ -212,14 +213,15 @@
               <span class="project-tag cyan">Redes</span>
               <span class="project-tag">REST API</span>
             </div>
-            <span class="project-status wip">En desarrollo · evidencia próximamente</span>
+            <span class="project-status wip">Fase de investigación · diseño en GitHub</span>
           </div>
-        </div>
+        </a>
 
-        <div class="project-card no-link">
+        <a href="https://github.com/brayansanpr1694/siima-vektor-telemetria" target="_blank" rel="noopener" class="project-card">
           <div class="project-card-icon">🏎️</div>
           <div class="project-card-header">
             <div class="project-card-title">SIIMA Vektor — Sistema de telemetría para vehículo eléctrico</div>
+            <span class="project-card-arrow">↗</span>
           </div>
           <p class="project-card-desc">Integrante del equipo de telemetría del vehículo eléctrico monoplaza SIIMA Vektor (UTS). Diseño basado en ESP32 (se evaluó el ESP32-C5 por su CAN FD; en el montaje final, ESP32-WROOM): lectura del BMS de la batería de 48 V, sensor Hall para RPM, RTC DS3231, registro en doble microSD y transmisión en vivo por LTE con el módulo SIMCOM A7670SA. Presentado como ponencia en el X CISIET 2026 (Universidad de Antofagasta, Chile).</p>
           <div class="project-tags">
@@ -227,13 +229,14 @@
             <span class="project-tag blue">CAN FD</span>
             <span class="project-tag cyan">IoT / LTE</span>
           </div>
-          <span class="project-status wip">En desarrollo · evidencia próximamente</span>
-        </div>
+          <span class="project-status wip">Caso de estudio en GitHub</span>
+        </a>
 
-        <div class="project-card no-link">
+        <a href="https://github.com/brayansanpr1694/homelab-proxmox" target="_blank" rel="noopener" class="project-card">
           <div class="project-card-icon">🖥️</div>
           <div class="project-card-header">
             <div class="project-card-title">Homelab con Proxmox</div>
+            <span class="project-card-arrow">↗</span>
           </div>
           <p class="project-card-desc">Laboratorio autoalojado sobre hardware reutilizado: Proxmox VE, firewall pfSense con puentes WAN y LAN separados, VMs Ubuntu Server, Nextcloud (Apache + MariaDB), Nginx + vsftpd, iRedMail y endurecimiento con SSH/UFW.</p>
           <div class="project-tags">
@@ -241,8 +244,8 @@
             <span class="project-tag blue">pfSense</span>
             <span class="project-tag cyan">Linux</span>
           </div>
-          <span class="project-status wip">En desarrollo · evidencia próximamente</span>
-        </div>
+          <span class="project-status wip">Activo · documentado en GitHub</span>
+        </a>
 
         <div class="project-card no-link">
           <div class="project-card-icon">🔄</div>
@@ -565,7 +568,7 @@
     });
 
     // Formulario de contacto (FormSubmit, AJAX). Mismo endpoint que ya está activo.
-    const FORM_ENDPOINT = 'https://formsubmit.co/ajax/brayan.santamaria@outlook.com';
+    const FORM_ENDPOINT = 'https://formsubmit.co/ajax/brayan.santamaria.2002@gmail.com';
     const FORM_TEXT = {
       sending: 'enviando...',
       button: 'enviar mensaje →',
